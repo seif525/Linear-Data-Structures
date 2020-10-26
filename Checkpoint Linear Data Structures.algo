@@ -1,0 +1,23 @@
+ALGORITHM algorithm_Checkpoint Linear Data Structures
+VAR
+    tab1, tab2 : ARRAY_OF INTEGER[50]     
+       i ,j,x,y:INTEGER;    sum:=0;
+BEGIN
+    FOR i FROM 0 TO tab1.length STEP 1  DO    
+        WHILE (tab1[i]<>tab2[j] AND j< tab2.length) DO 
+                   j=j+1    
+                       END_WHILE 
+                              IF (j=tab2.length) THEN  
+                                        sum:=sum +tab1[i]     
+                                           END_IF        
+                                               END_FOR
+    FOR x FROM 0 TO tab2.length STEP 1  DO  
+          WHILE (tab2[x]<>tab1[y] AND  y < tab1.length) DO    
+                  y=y+1    
+                      END_WHILE  
+                            IF (y=tab1.length) THEN    
+                                    sum:=sum +tab2[x]  
+                                          END_IF    
+                                              END_FOR
+    write("the sum is " + sum) ;
+END
